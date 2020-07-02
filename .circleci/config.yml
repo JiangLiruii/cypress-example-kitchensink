@@ -12,10 +12,10 @@ orbs:
   cypress: cypress-io/cypress@1.16.1
   # for testing on Windows
   # https://circleci.com/docs/2.0/hello-world-windows/
+environment:
+  CYPRESS_RECORD_KEY: a3bdda75-bd9e-4022-aea0-fb74b1f0fd9a
 workflows:
   linux-build:
-    environment:
-      CYPRESS_RECORD_KEY: a3bdda75-bd9e-4022-aea0-fb74b1f0fd9a
     jobs:
       # checks out code and installs dependencies once
       - cypress/install:
