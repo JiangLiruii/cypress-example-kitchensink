@@ -12,8 +12,6 @@ orbs:
   cypress: cypress-io/cypress@1.16.1
   # for testing on Windows
   # https://circleci.com/docs/2.0/hello-world-windows/
-environment:
-  CYPRESS_RECORD_KEY: a3bdda75-bd9e-4022-aea0-fb74b1f0fd9a
 workflows:
   linux-build:
     jobs:
@@ -32,6 +30,8 @@ workflows:
       # runs on 3 machines, load balances tests
       # and records on Cypress Dashboard
       - cypress/run:
+          environment:
+            CYPRESS_RECORD_KEY: a3bdda75-bd9e-4022-aea0-fb74b1f0fd9a
           # name this job because we are running "cypress/run" several times
           # with different parameters
           name: '3 machines'
