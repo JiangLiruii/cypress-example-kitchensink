@@ -6,8 +6,7 @@
 
 # to use CircleCI orbs need to use version >= 2.1
 version: 2.1
-env:
-  CYPRESS_RECORD_KEY: a3bdda75-bd9e-4022-aea0-fb74b1f0fd9a
+
 orbs:
   # use Cypress orb from CircleCI registry
   cypress: cypress-io/cypress@1.16.1
@@ -15,6 +14,8 @@ orbs:
   # https://circleci.com/docs/2.0/hello-world-windows/
 workflows:
   linux-build:
+    environment:
+      CYPRESS_RECORD_KEY: a3bdda75-bd9e-4022-aea0-fb74b1f0fd9a
     jobs:
       # checks out code and installs dependencies once
       - cypress/install:
