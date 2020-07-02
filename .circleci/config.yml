@@ -6,6 +6,8 @@
 
 # to use CircleCI orbs need to use version >= 2.1
 version: 2.1
+env:
+  CYPRESS_RECORD_KEY: a3bdda75-bd9e-4022-aea0-fb74b1f0fd9a
 orbs:
   # use Cypress orb from CircleCI registry
   cypress: cypress-io/cypress@1.16.1
@@ -39,6 +41,5 @@ workflows:
           record: true # record results on Cypress dashboard
           parallel: true # load balance all tests
           parallelism: 3 # across 3 machines
-          recordKey: a3bdda75-bd9e-4022-aea0-fb74b1f0fd9a
           group: '3x-electron on CircleCI' # name this group
           start: 'npm run start:ci' # start server before running tests
