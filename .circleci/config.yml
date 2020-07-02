@@ -53,6 +53,10 @@ jobs:
           name: 'Run Cypress tests'
           command: npm run e2e:record -- --key a3bdda75-bd9e-4022-aea0-fb74b1f0fd9a --env circle=true
           no_output_timeout: '1m'
+          record: true
+          parallel: true
+          parallelism: 2
+          group: 'Win build'
       - store_artifacts:
           path: cypress\screenshots
       - store_artifacts:
