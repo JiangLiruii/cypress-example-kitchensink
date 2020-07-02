@@ -25,7 +25,7 @@
     "e2e:record": "cypress run --record",
     "e2e:record:chrome": "cypress run --record --browser chrome",
     "e2e:record:edge": "cypress run --record --browser edge",
-    "e2e:record:parallel": "cypress run --record --key a3bdda75-bd9e-4022-aea0-fb74b1f0fd9a --paralle",
+    "e2e:record:parallel": "cypress run --record --key a3bdda75-bd9e-4022-aea0-fb74b1f0fd9a --parallel",
     "test:ci": "run-p --race start:ci e2e",
     "test:ci:chrome": "run-p --race start:ci e2e:chrome",
     "test:ci:record": "run-p --race start:ci e2e:record",
